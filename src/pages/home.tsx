@@ -6,7 +6,7 @@ import { client } from '../utils/client';
 
 import './home.scss';
 
-const defaultZoom = 2;
+const defaultZoom = 4;
 const selectedZoom = 13;
 
 export const HomePage: React.FC = () => {
@@ -51,7 +51,7 @@ export const HomePage: React.FC = () => {
     console.log('Initializing map...');
     if (mapContainer.current) {
       mapRef.current = new maptalks.Map(mapContainer.current, {
-        center: [0, 0],
+        center: [55.7558, 37.6173],
         zoom: defaultZoom,
       });
   
@@ -140,25 +140,29 @@ export const HomePage: React.FC = () => {
   return (
     <div className="home">
       <h1>MIDB Units - Notional Demo</h1>
-      {objectList.status === 'loading' && <div>Loading…</div>}
-      {objectList.status === 'loaded' && (
-        <ul>
-          {objectList.value.map(object => (
-            <li
-              key={object.__primaryKey}
-              className={`card${selectedUnit && selectedUnit.__primaryKey === object.__primaryKey ? ' selected' : ''}`}
-              onClick={() => selectUnit(object)}
-            >
-              <h2>{object.unitName}</h2>
-              <p>Affiliation: {object.affiliation}</p>
-              <p>Category: {object.category}</p>
-              <p>Country: {object.country}</p>
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <div id="map" ref={mapContainer} style={{ width: '100%', height: '400px' }}></div>
+      <div className="content">
+        <div className="object-list">
+          {objectList.status === 'loading' && <div>Loading…</div>}
+          {objectList.status === 'loaded' && (
+            <ul>
+              {objectList.value.map(object => (
+                <li
+                  key={object.__primaryKey}
+                  className={`card${selectedUnit && selectedUnit.__primaryKey === object.__primaryKey ? ' selected' : ''}`}
+                  onClick={() => selectUnit(object)}
+                >
+                  <h2>{object.unitName}</h2>
+                  <p>Affiliation: {object.affiliation}</p>
+                  <p>Category: {object.category}</p>
+                  <p>Country: {object.country}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+  
+        <div id="map" ref={mapContainer}></div> 
+      </div>
     </div>
   );
 };
