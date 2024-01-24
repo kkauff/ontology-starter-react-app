@@ -2,6 +2,10 @@
 
 A simple skeleton application to get you started on React/TypeScript development on top of the Ontology SDK in Foundry.
 
+# MIDB Plotting Branch
+
+<img width="1727" alt="Screenshot 2024-01-23 at 8 17 37 PM" src="https://github.com/kkauff/ontology-starter-react-app/assets/1187046/b5fa6fec-fc3d-4a36-b3f3-4f27684d6ae5">
+
 ## Prerequisites
 
 1. Make sure you're on Node >= 18.5.0
