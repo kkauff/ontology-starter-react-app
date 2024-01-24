@@ -4,7 +4,8 @@ A simple skeleton application to get you started on React/TypeScript development
 
 # MIDB Plotting Branch
 
-<img width="1727" alt="Screenshot 2024-01-23 at 8 17 37 PM" src="https://github.com/kkauff/ontology-starter-react-app/assets/1187046/b5fa6fec-fc3d-4a36-b3f3-4f27684d6ae5">
+![onotlogy-react-starter-app](https://github.com/kkauff/ontology-starter-react-app/assets/1187046/9b585e9e-9056-486d-8ccc-d6de487490bb)
+
 
 ## Prerequisites
 
